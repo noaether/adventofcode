@@ -15,7 +15,12 @@ This repository is organized by year and day. Each year has its own directory, a
     ├── day-01
     ├── day-02
     ├── ...
-    └── day-25
+    ├── day-25
+    └── inputs/
+        ├── day-01
+        ├── day-02
+        ├── ...
+        └── day-25
 ```
 
 For each day's puzzle, you will find the input file provided by Advent of Code, as well as my solution code. The solution code is implemented in [language], and the files are named accordingly.
