@@ -22,7 +22,9 @@ For each day's puzzle, you will find the input file provided by Advent of Code, 
 
 ## Running the Solutions
 
-To run the solutions for a specific day, navigate to the corresponding directory and follow the instructions provided in the README file, if available. You may need to install dependencies or execute specific commands to get the correct output.
+To run the solutions for a specific day, run "node [YEAR]/day-[NUMBER].js
+
+I am working in parallel on a main file that runs all of them at once and gives all the answers as either a 2D map or just an array of both answers in a single string 
 
 Please note that these solutions are my personal implementations, and there might be multiple ways to solve each puzzle. If you have any suggestions or alternative solutions, feel free to open an issue or submit a pull request.
 
