@@ -1,0 +1,23 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "This repository contains my solutions to the Advent of Code challenges. Advent of Code is an annual coding event that takes place during the month of December, where participants solve a series of programming puzzles. Each day, a new puzzle is released, and participants are encouraged to find the solutions to these puzzles using their programming skills.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noaether/adventofcode.git"
+  },
+  "keywords": [
+    "adventofcode"
+  ],
+  "author": "Noae",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/noaether/adventofcode/issues"
+  },
+  "homepage": "https://github.com/noaether/adventofcode#readme"
+}
