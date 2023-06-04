@@ -1,4 +1,4 @@
-const input = `
+const strategyGuide = `
 C Y
 B Y
 C Y
@@ -2498,7 +2498,6 @@ C Z
 C Y
 A Z
 A Y
-C Y
-`
+C Y`
 
-export default input
+export default strategyGuide

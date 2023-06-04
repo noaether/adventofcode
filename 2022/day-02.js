@@ -1,35 +1,38 @@
 import strategyGuide from "./inputs/day-02.js";
 
-const calculateTotalScore = (strategyGuide) => {
-  const choicesMap = {
-    A: "Y", // Rock -> Paper
-    B: "X", // Paper -> Rock
-    C: "Z", // Scissors -> Scissors
-  };
-
-  const rounds = strategyGuide.trim().split("\n");
-  let totalScore = 0;
-
-  for (const round of rounds) {
-    const [opponentChoice, ourChoice] = round.split(" ");
-    const opponentScore = ["A", "B", "C"].indexOf(opponentChoice) + 1;
-    const ourScore = ["X", "Y", "Z"].indexOf(choicesMap[opponentChoice]) + 1;
-
-    if (ourChoice === choicesMap[opponentChoice]) {
-      totalScore += ourScore + 3; // Draw
-    } else if (
-      (ourChoice === "X" && choicesMap[opponentChoice] === "Z") || // Rock > Scissors
-      (ourChoice === "Y" && choicesMap[opponentChoice] === "X") || // Paper > Rock
-      (ourChoice === "Z" && choicesMap[opponentChoice] === "Y") // Scissors > Paper
-    ) {
-      totalScore += ourScore + 6; // Win
-    } else {
-      totalScore += ourScore; // Loss
-    }
-  }
-
-  return totalScore;
+/*
+const strategyGuide = `
+A Y
+B X
+C Z
+`;
+*/
+const POINTMAP = {
+  "A X": [4, 3],
+  "A Y": [8, 4],
+  "A Z": [3, 8],
+  "B X": [1, 1],
+  "B Y": [5, 5],
+  "B Z": [9, 9],
+  "C X": [7, 2],
+  "C Y": [2, 6],
+  "C Z": [6, 7],
 };
 
-const totalScore = calculateTotalScore(strategyGuide);
-console.log("Total Score according to the strategy guide:", totalScore);
+function calculateScore(strategyGuide) {
+  const throws = strategyGuide.trim().split("\n");
+  const totalScores = [0, 0];
+
+  for (let i = 0; i < throws.length; i++) {
+    const throwStr = throws[i];
+    const points = POINTMAP[throwStr];
+
+    totalScores[0] += points[0];
+    totalScores[1] += points[1];
+  }
+
+  return totalScores;
+}
+
+const totalScore = calculateScore(strategyGuide);
+console.log("Total Score:", totalScore);
